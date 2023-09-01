@@ -10,7 +10,7 @@
 Run ```php composer.phar require naftali/php-bitgesellrpc``` in your project directory or add following lines to composer.json
 ```javascript
 "require": {
-    "naftali/php-bitgesellrpc": "^2.2"
+    "naftalimurgor/php-bitgesellrpc": "^2.2"
 }
 ```
 and run ```php composer.phar install```.
