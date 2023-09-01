@@ -7,10 +7,10 @@
 [![Code Coverage](https://codeclimate.com/github/denpamusic/php-bitcoinrpc/badges/coverage.svg)](https://codeclimate.com/github/denpamusic/php-bitcoinrpc/coverage)
 
 ## Installation
-Run ```php composer.phar require denpa/php-bitcoinrpc``` in your project directory or add following lines to composer.json
+Run ```php composer.phar require naftali/php-bitgesellrpc``` in your project directory or add following lines to composer.json
 ```javascript
 "require": {
-    "denpa/php-bitcoinrpc": "^2.2"
+    "naftali/php-bitgesellrpc": "^2.2"
 }
 ```
 and run ```php composer.phar install```.
@@ -58,7 +58,7 @@ Then call methods defined in [Bitcoin Core API Documentation](https://bitcoin.or
 /**
  * Get block info.
  */
-$block = $bitcoind->getBlock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
+$block = $bgld->getBlock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
 
 $block('hash')->get();     // 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
 $block['height'];          // 0 (array access)
@@ -85,7 +85,7 @@ $txid = $result->get();
  */
 $result = $bgld->listSinceBlock();
 $bgl = $result->sum('transactions.*.amount');
-$satoshi = \naftalimurgor\Bitgesell\to_satoshi($bitcoin);
+$satoshi = \naftalimurgor\Bitgesell\to_satoshi($bitgesell);
 ```
 To send asynchronous request, add Async to method name:
 ```php
