@@ -33,7 +33,7 @@ use naftalimurgor\Bitgesell\Client as BitgesellClient;
 
 $bgld = new BitgesellClient('http://rpcuser:rpcpassword@localhost:8332/');
 ```
-or use array to define your bitcoind settings
+or use array to define your bgld settings
 ```php
 /**
  * Don't forget to include composer autoloader by uncommenting line below
@@ -163,7 +163,7 @@ Package provides following helpers to assist with value handling.
 #### `to_bitcoin()`
 Converts value in satoshi to bitcoin.
 ```php
-echo naftalimurgor\Bitgesell\to_bitcoin(100000); // 0.00100000
+echo naftalimurgor\Bitgesell\to_bitgesell(100000); // 0.00100000
 ```
 #### `to_satoshi()`
 Converts value in bitcoin to satoshi.
@@ -178,7 +178,7 @@ echo naftalimurgor\Bitgesell\to_ubtc(0.001); // 1000.0000
 #### `to_mbtc()`
 Converts value in bitcoin to mbtc.
 ```php
-echo Denpa\Bitcoin\to_mbtc(0.001); // 1.0000
+echo naftalimurgor\Bitgesell\to_mbtc(0.001); // 1.0000
 ```
 #### `to_fixed()`
 Trims float value to precision without rounding.
@@ -189,11 +189,5 @@ echo naftalimurgor\Bitgesell\to_fixed(0.1236, 3); // 0.123
 ## License
 
 This product is distributed under MIT license.
-
-## Donations
-
-If you like this project, please consider donating:<br>
-**BTC**: 3L6dqSBNgdpZan78KJtzoXEk9DN3sgEQJu<br>
-**Bech32**: bc1qyj8v6l70c4mjgq7hujywlg6le09kx09nq8d350
 
 ❤Thanks for your support!❤
