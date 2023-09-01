@@ -154,7 +154,7 @@ echo $balance->get(); // 0.10000000
 
 ## Exceptions
 * `naftalimurgor\Bitgesell\Exceptions\BadConfigurationException` - thrown on bad client configuration.
-* `Denpa\Bitcoin\Exceptions\BadRemoteCallException` - thrown on getting error message from daemon.
+* `naftalimurgor\Bitgesell\Exceptions\BadRemoteCallException` - thrown on getting error message from daemon.
 * `naftalimurgor\BitgesellExceptions\ConnectionException` - thrown on daemon connection errors (e. g. timeouts)
 
 
