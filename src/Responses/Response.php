@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Responses;
+namespace naftalimurgor\Bitgesell\Responses;
 
-use Denpa\Bitcoin\Traits\Message;
+use naftalimurgor\Bitgesell\Traits\Message;
 use Psr\Http\Message\ResponseInterface;
 
 abstract class Response implements ResponseInterface

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Exceptions;
+namespace naftalimurgor\Bitgesell\Exceptions;
 
-use Denpa\Bitcoin\Traits\Singleton;
+use naftalimurgor\Bitgesell\Traits\Singleton;
 use GuzzleHttp\Exception\RequestException;
 use Throwable;
 

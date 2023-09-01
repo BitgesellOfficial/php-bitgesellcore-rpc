@@ -1,10 +1,10 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests\Exceptions;
+namespace naftalimurgor\Bitgesell\Tests\Exceptions;
 
-use Denpa\Bitcoin\Exceptions\BadRemoteCallException;
-use Denpa\Bitcoin\Responses\Response;
-use Denpa\Bitcoin\Tests\TestCase;
+use naftalimurgor\Bitgesell\Exceptions\BadRemoteCallException;
+use naftalimurgor\Bitgesell\Responses\Response;
+use naftalimurgor\Bitgesell\Tests\TestCase;
 
 class BadRemoteCallExceptionTest extends TestCase
 {

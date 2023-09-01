@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Exceptions;
+namespace naftalimurgor\Bitgesell\Exceptions;
 
-use Denpa\Bitcoin\Responses\Response;
+use naftalimurgor\Bitgesell\Responses\Response;
 
 class BadRemoteCallException extends ClientException
 {
     /**
      * Response object.
      *
-     * @var \Denpa\Bitcoin\Responses\Response
+     * @var \naftalimurgor\Bitgesell\Responses\Response
      */
     protected $response;
 
     /**
      * Constructs new bad remote call exception.
      *
-     * @param \Denpa\Bitcoin\Responses\Response $response
+     * @param \naftalimurgor\Bitgesell\Responses\Response $response
      *
      * @return void
      */
@@ -33,7 +33,7 @@ class BadRemoteCallException extends ClientException
     /**
      * Gets response object.
      *
-     * @return \Denpa\Bitcoin\Responses\Response
+     * @return \naftalimurgor\Bitgesell\Responses\Response
      */
     public function getResponse(): Response
     {

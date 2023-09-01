@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Responses;
+namespace naftalimurgor\Bitgesell\Responses;
 
-use Denpa\Bitcoin\Traits\Collection;
-use Denpa\Bitcoin\Traits\ImmutableArray;
-use Denpa\Bitcoin\Traits\SerializableContainer;
+use naftalimurgor\Bitgesell\Traits\Collection;
+use naftalimurgor\Bitgesell\Traits\ImmutableArray;
+use naftalimurgor\Bitgesell\Traits\SerializableContainer;
 
-class BitcoindResponse extends Response implements
+class BitgeselldResponse extends Response implements
     \ArrayAccess,
     \Countable,
     \JsonSerializable

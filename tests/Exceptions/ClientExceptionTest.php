@@ -1,9 +1,9 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests\Exceptions;
+namespace naftalimurgor\Bitgesell\Tests\Exceptions;
 
-use Denpa\Bitcoin\Exceptions\ClientException;
-use Denpa\Bitcoin\Tests\TestCase;
+use naftalimurgor\Bitgesell\Exceptions\ClientException;
+use naftalimurgor\Bitgesell\Tests\TestCase;
 
 class ClientExceptionTest extends TestCase
 {
@@ -66,7 +66,7 @@ class FakeClientException extends ClientException
 
 namespace Test\Exceptions;
 
-class FakeClientException extends \Denpa\Bitcoin\Tests\Exceptions\FakeClientException
+class FakeClientException extends \naftalimurgor\Bitgesell\Tests\Exceptions\FakeClientException
 {
     // same as above in different namespace
 }

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin;
+namespace naftalimurgor\Bitgesell;
 
-use Denpa\Bitcoin\Exceptions\BadRemoteCallException;
-use Denpa\Bitcoin\Traits\HandlesAsync;
+use naftalimurgor\Bitgesell\Exceptions\BadRemoteCallException;
+use naftalimurgor\Bitgesell\Traits\HandlesAsync;
 use GuzzleHttp\Client as GuzzleHttp;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
@@ -246,7 +246,7 @@ class Client
      */
     protected function getResponseHandler(): string
     {
-        return 'Denpa\\Bitcoin\\Responses\\BitcoindResponse';
+        return 'naftalimurgor\\Bitgesell\\Responses\\BitgeselldResponse';
     }
 
     /**

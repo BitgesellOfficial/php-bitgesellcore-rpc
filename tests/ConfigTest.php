@@ -1,8 +1,8 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests;
+namespace naftalimurgor\Bitgesell\Tests;
 
-use Denpa\Bitcoin\Config;
+use naftalimurgor\Bitgesell\Config;
 
 class ConfigTest extends TestCase
 {

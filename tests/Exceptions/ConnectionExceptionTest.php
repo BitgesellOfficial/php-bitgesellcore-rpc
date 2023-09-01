@@ -1,9 +1,9 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests\Exceptions;
+namespace naftalimurgor\Bitgesell\Tests\Exceptions;
 
-use Denpa\Bitcoin\Exceptions\ConnectionException;
-use Denpa\Bitcoin\Tests\TestCase;
+use naftalimurgor\Bitgesell\Exceptions\ConnectionException;
+use naftalimurgor\Bitgesell\Tests\TestCase;
 use GuzzleHttp\Psr7\Request;
 
 class ConnectionExceptionTest extends TestCase

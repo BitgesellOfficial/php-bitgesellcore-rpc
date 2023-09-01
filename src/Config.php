@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Denpa\Bitcoin;
 
-use Denpa\Bitcoin\Traits\Collection;
-use Denpa\Bitcoin\Traits\ImmutableArray;
+use naftalimurgor\Bitgesell\Traits\Collection;
+use naftalimurgor\Bitgesell\Traits\ImmutableArray;
 
 class Config implements \ArrayAccess, \Countable
 {

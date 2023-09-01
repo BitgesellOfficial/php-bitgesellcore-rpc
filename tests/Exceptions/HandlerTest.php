@@ -1,10 +1,10 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests\Exceptions;
+namespace naftalimurgor\Bitgesell\Tests\Exceptions;
 
-use Denpa\Bitcoin\Exceptions;
-use Denpa\Bitcoin\Exceptions\Handler as ExceptionHandler;
-use Denpa\Bitcoin\Tests\TestCase;
+use naftalimurgor\Bitgesell\Exceptions;
+use naftalimurgor\Bitgesell\Exceptions\Handler as ExceptionHandler;
+use naftalimurgor\Bitgesell\Tests\TestCase;
 use Exception;
 
 class HandlerTest extends TestCase
@@ -61,7 +61,7 @@ class HandlerTest extends TestCase
         $this->expectException(BadConfigurationException::class);
         $this->expectExceptionMessage('Test message');
 
-        ExceptionHandler::getInstance()->setNamespace('Denpa\\Bitcoin\\Tests\\Exceptions');
+        ExceptionHandler::getInstance()->setNamespace('naftalimurgor\\Bitgesell\\Tests\\Exceptions');
         ExceptionHandler::getInstance()->handle(
             new Exceptions\BadConfigurationException(['foo' => 'bar'], 'Test message')
         );

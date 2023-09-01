@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Exceptions;
+namespace naftalimurgor\Bitgesell\Exceptions;
 
 use GuzzleHttp\Psr7\Request;
 

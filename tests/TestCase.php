@@ -1,8 +1,8 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests;
+namespace naftalimurgor\Bitgesell\Tests;
 
-use Denpa\Bitcoin\Responses\BitcoindResponse;
+use naftalimurgor\Bitgesell\Responses\BitcoindResponse;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Handler\MockHandler;

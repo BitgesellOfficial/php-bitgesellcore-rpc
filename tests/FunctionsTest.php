@@ -1,10 +1,10 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests;
+namespace naftalimurgor\Bitgesell\Tests;
 
-use Denpa\Bitcoin;
-use Denpa\Bitcoin\Exceptions\BadConfigurationException;
-use Denpa\Bitcoin\Exceptions\Handler as ExceptionHandler;
+use naftalimurgor\Bitgesell;
+use naftalimurgor\Bitgesell\Exceptions\BadConfigurationException;
+use naftalimurgor\Bitgesell\Exceptions\Handler as ExceptionHandler;
 
 class FunctionsTest extends TestCase
 {
@@ -12,37 +12,37 @@ class FunctionsTest extends TestCase
      * Test satoshi to btc converter.
      *
      * @param int    $satoshi
-     * @param string $bitcoin
+     * @param string $bgl
      *
      * @return void
      *
      * @dataProvider satoshiBtcProvider
      */
-    public function testToBtc(int $satoshi, string $bitcoin): void
+    public function testToBtc(int $satoshi, string $bgl): void
     {
-        $this->assertEquals($bitcoin, Bitcoin\to_bitcoin($satoshi));
+        $this->assertEquals($bgl, Bitgesell\to_bitcoin($satoshi));
     }
 
     /**
      * Test bitcoin to satoshi converter.
      *
      * @param int    $satoshi
-     * @param string $bitcoin
+     * @param string $bgl
      *
      * @return void
      *
      * @dataProvider satoshiBtcProvider
      */
-    public function testToSatoshi(int $satoshi, string $bitcoin): void
+    public function testToSatoshi(int $satoshi, string $bgl): void
     {
-        $this->assertEquals($satoshi, Bitcoin\to_satoshi($bitcoin));
+        $this->assertEquals($satoshi, Bitgesell\to_satoshi($bgl));
     }
 
     /**
      * Test bitcoin to ubtc/bits converter.
      *
      * @param int    $ubtc
-     * @param string $bitcoin
+     * @param string $bgl
      *
      * @return void
      *
@@ -50,14 +50,14 @@ class FunctionsTest extends TestCase
      */
     public function testToBits(int $ubtc, string $bitcoin): void
     {
-        $this->assertEquals($ubtc, Bitcoin\to_ubtc($bitcoin));
+        $this->assertEquals($ubtc, Bitgesell\to_ubtc($bitcoin));
     }
 
     /**
      * Test bitcoin to mbtc converter.
      *
      * @param float  $mbtc
-     * @param string $bitcoin
+     * @param string $bgl
      *
      * @return void
      *
@@ -65,7 +65,7 @@ class FunctionsTest extends TestCase
      */
     public function testToMbtc(float $mbtc, string $bitcoin): void
     {
-        $this->assertEquals($mbtc, Bitcoin\to_mbtc($bitcoin));
+        $this->assertEquals($mbtc, Bitgesell\to_mbtc($bitcoin));
     }
 
     /**
@@ -84,7 +84,7 @@ class FunctionsTest extends TestCase
         int $precision,
         string $expected
     ): void {
-        $this->assertSame($expected, Bitcoin\to_fixed($float, $precision));
+        $this->assertSame($expected, Bitgesell\to_fixed($float, $precision));
     }
 
     /**
@@ -109,7 +109,7 @@ class FunctionsTest extends TestCase
         ?string $user,
         ?string $pass
     ): void {
-        $parts = Bitcoin\split_url($url);
+        $parts = Bitgesell\split_url($url);
 
         $this->assertEquals($parts['scheme'], $scheme);
         $this->assertEquals($parts['host'], $host);
@@ -130,7 +130,7 @@ class FunctionsTest extends TestCase
         $this->expectException(BadConfigurationException::class);
         $this->expectExceptionMessage('Invalid url');
 
-        Bitcoin\split_url('cookies!');
+        Bitgesell\split_url('cookies!');
     }
 
     /**
@@ -140,7 +140,7 @@ class FunctionsTest extends TestCase
      */
     public function testExceptionHandlerHelper(): void
     {
-        $this->assertInstanceOf(ExceptionHandler::class, Bitcoin\exception());
+        $this->assertInstanceOf(ExceptionHandler::class, Bitgesell\exception());
     }
 
     /**

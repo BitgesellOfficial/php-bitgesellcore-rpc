@@ -1,9 +1,9 @@
 <?php
 
-namespace Denpa\Bitcoin\Tests\Exceptions;
+namespace naftalimurgor\Bitgesell\Tests\Exceptions;
 
-use Denpa\Bitcoin\Exceptions\BadConfigurationException;
-use Denpa\Bitcoin\Tests\TestCase;
+use naftalimurgor\Bitgesell\Exceptions\BadConfigurationException;
+use naftalimurgor\Bitgesell\Tests\TestCase;
 
 class BadConfigurationExceptionTest extends TestCase
 {

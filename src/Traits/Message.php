@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin\Traits;
+namespace naftalimurgor\Bitgesell\Traits;
 
 use Psr\Http\Message\StreamInterface;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Denpa\Bitcoin;
+namespace naftalimurgor\Bitgesell;
 
-use Denpa\Bitcoin\Exceptions\BadConfigurationException;
-use Denpa\Bitcoin\Exceptions\Handler as ExceptionHandler;
+use naftalimurgor\Bitgesell\Exceptions\BadConfigurationException;
+use naftalimurgor\Bitgesell\Exceptions\Handler as ExceptionHandler;
 
 if (!function_exists('to_bitcoin')) {
     /**

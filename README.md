@@ -1,4 +1,4 @@
-# Simple Bitcoin JSON-RPC client based on GuzzleHttp
+# Simple Bitgesell JSON-RPC client based on GuzzleHttp
 
 [![Latest Stable Version](https://poser.pugx.org/denpa/php-bitcoinrpc/v/stable)](https://packagist.org/packages/denpa/php-bitcoinrpc)
 [![License](https://poser.pugx.org/denpa/php-bitcoinrpc/license)](https://packagist.org/packages/denpa/php-bitcoinrpc)
@@ -29,9 +29,9 @@ Create new object with url as parameter
  **/
 // require 'vendor/autoload.php';
 
-use Denpa\Bitcoin\Client as BitcoinClient;
+use naftalimurgor\Bitgesell\Client as BitgesellClient;
 
-$bitcoind = new BitcoinClient('http://rpcuser:rpcpassword@localhost:8332/');
+$bgld = new BitgesellClient('http://rpcuser:rpcpassword@localhost:8332/');
 ```
 or use array to define your bitcoind settings
 ```php
@@ -41,9 +41,9 @@ or use array to define your bitcoind settings
  **/
 // require 'vendor/autoload.php';
 
-use Denpa\Bitcoin\Client as BitcoinClient;
+use naftalimurgor\Bitgesell\Client as BitgesellClient;
 
-$bitcoind = new BitcoinClient([
+$bgld = new BitgesellClient([
     'scheme'        => 'http',                 // optional, default http
     'host'          => 'localhost',            // optional, default localhost
     'port'          => 8332,                   // optional, default 8332
@@ -77,19 +77,19 @@ $block('tx')->last();      // txid of last transaction
 /**
  * Send transaction.
  */
-$result = $bitcoind->sendToAddress('mmXgiR6KAhZCyQ8ndr2BCfEq1wNG2UnyG6', 0.1);
+$result = $bgld->sendToAddress('mmXgiR6KAhZCyQ8ndr2BCfEq1wNG2UnyG6', 0.1);
 $txid = $result->get();
 
 /**
  * Get transaction amount.
  */
-$result = $bitcoind->listSinceBlock();
-$bitcoin = $result->sum('transactions.*.amount');
-$satoshi = \Denpa\Bitcoin\to_satoshi($bitcoin);
+$result = $bgld->listSinceBlock();
+$bgl = $result->sum('transactions.*.amount');
+$satoshi = \naftalimurgor\Bitgesell\to_satoshi($bitcoin);
 ```
 To send asynchronous request, add Async to method name:
 ```php
-$bitcoind->getBlockAsync(
+$bgld->getBlockAsync(
     '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f',
     function ($response) {
         // success
@@ -105,7 +105,7 @@ You can also send requests using request method:
 /**
  * Get block info.
  */
-$block = $bitcoind->request('getBlock', '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
+$block = $bgld->request('getBlock', '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
 
 $block('hash');            // 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
 $block['height'];          // 0 (array access)
@@ -123,13 +123,13 @@ $block->random(1, 'tx');   // get random txid
 /**
  * Send transaction.
  */
-$result = $bitcoind->request('sendtoaddress', 'mmXgiR6KAhZCyQ8ndr2BCfEq1wNG2UnyG6', 0.06);
+$result = $bgld->request('sendtoaddress', 'mmXgiR6KAhZCyQ8ndr2BCfEq1wNG2UnyG6', 0.06);
 $txid = $result->get();
 
 ```
 or requestAsync method for asynchronous calls:
 ```php
-$bitcoind->requestAsync(
+$bgld->requestAsync(
     'getBlock',
     '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f',
     function ($response) {
@@ -147,15 +147,15 @@ You can use `wallet($name)` function to do a [Multi-Wallet RPC call](https://en.
 /**
  * Get wallet2.dat balance.
  */
-$balance = $bitcoind->wallet('wallet2.dat')->getbalance();
+$balance = $bgld->wallet('wallet2.dat')->getbalance();
 
 echo $balance->get(); // 0.10000000
 ```
 
 ## Exceptions
-* `Denpa\Bitcoin\Exceptions\BadConfigurationException` - thrown on bad client configuration.
+* `naftalimurgor\Bitgesell\Exceptions\BadConfigurationException` - thrown on bad client configuration.
 * `Denpa\Bitcoin\Exceptions\BadRemoteCallException` - thrown on getting error message from daemon.
-* `Denpa\Bitcoin\Exceptions\ConnectionException` - thrown on daemon connection errors (e. g. timeouts)
+* `naftalimurgor\BitgesellExceptions\ConnectionException` - thrown on daemon connection errors (e. g. timeouts)
 
 
 ## Helpers
@@ -163,17 +163,17 @@ Package provides following helpers to assist with value handling.
 #### `to_bitcoin()`
 Converts value in satoshi to bitcoin.
 ```php
-echo Denpa\Bitcoin\to_bitcoin(100000); // 0.00100000
+echo naftalimurgor\Bitgesell\to_bitcoin(100000); // 0.00100000
 ```
 #### `to_satoshi()`
 Converts value in bitcoin to satoshi.
 ```php
-echo Denpa\Bitcoin\to_satoshi(0.001); // 100000
+echo naftalimurgor\Bitgesell\to_satoshi(0.001); // 100000
 ```
 #### `to_ubtc()`
 Converts value in bitcoin to ubtc/bits.
 ```php
-echo Denpa\Bitcoin\to_ubtc(0.001); // 1000.0000
+echo naftalimurgor\Bitgesell\to_ubtc(0.001); // 1000.0000
 ```
 #### `to_mbtc()`
 Converts value in bitcoin to mbtc.
@@ -183,7 +183,7 @@ echo Denpa\Bitcoin\to_mbtc(0.001); // 1.0000
 #### `to_fixed()`
 Trims float value to precision without rounding.
 ```php
-echo Denpa\Bitcoin\to_fixed(0.1236, 3); // 0.123
+echo naftalimurgor\Bitgesell\to_fixed(0.1236, 3); // 0.123
 ```
 
 ## License
