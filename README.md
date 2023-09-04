@@ -1,10 +1,6 @@
-# Simple Bitgesell JSON-RPC client based on GuzzleHttp
+# PHP-BIGTGESELLRPC
 
-[![Latest Stable Version](https://poser.pugx.org/denpa/php-bitcoinrpc/v/stable)](https://packagist.org/packages/denpa/php-bitcoinrpc)
-[![License](https://poser.pugx.org/denpa/php-bitcoinrpc/license)](https://packagist.org/packages/denpa/php-bitcoinrpc)
-[![ci](https://github.com/denpamusic/php-bitcoinrpc/actions/workflows/ci.yml/badge.svg)](https://github.com/denpamusic/php-bitcoinrpc/actions/workflows/ci.yml)
-[![Code Climate](https://codeclimate.com/github/denpamusic/php-bitcoinrpc/badges/gpa.svg)](https://codeclimate.com/github/denpamusic/php-bitcoinrpc)
-[![Code Coverage](https://codeclimate.com/github/denpamusic/php-bitcoinrpc/badges/coverage.svg)](https://codeclimate.com/github/denpamusic/php-bitcoinrpc/coverage)
+<img src="logo.png" style="height: 300px;"/>
 
 ## Installation
 Run ```php composer.phar require naftali/php-bitgesellrpc``` in your project directory or add following lines to composer.json
